@@ -403,12 +403,7 @@
 
   export default {
     props: {
-      initialDate: {
-        type: Object,
-        default() {
-          return moment();
-        }
-      },
+      initialDate: { type: Object },
       cellWidth: { type: [Number, String], default: 41 },
       header: { type: Boolean, default: true },
       disablePassedDays: { type: Boolean, default: false },

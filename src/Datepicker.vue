@@ -75,7 +75,7 @@
       name: { type: String, default: 'datepicker' },
       orientation: { type: String, default: 'portrait' },
       firstMonth: { type: Number },
-      initialDate: { type: Object }
+      initialDate: { type: Object, default: () => moment() }
     },
     data() {
       return {
