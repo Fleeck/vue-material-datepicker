@@ -24,6 +24,7 @@
                        :disabled-days="disabledDays"
                        :available-periods="availablePeriods"
                        :first-month="firstMonth"
+                       :initial-date="initialDate"
                        :lang="lang"
                        :orientation="orientation"
                        :show="isVisible"
@@ -73,7 +74,8 @@
       lang: { type: String, default: 'en' },
       name: { type: String, default: 'datepicker' },
       orientation: { type: String, default: 'portrait' },
-      firstMonth: { type: Number }
+      firstMonth: { type: Number },
+      initialDate: { type: Object }
     },
     data() {
       return {
