@@ -497,8 +497,12 @@
           this.classDirection = 'off';
           this.dayDirection = 'off';
         } else {
-          let newDate = moment([this.date.year(), this.date.month(), this.date.date()]);
-          this.date = newDate.clone();
+          if (this.date) {
+            let newDate = moment([this.date.year(), this.date.month(), this.date.date()]);
+            this.date = newDate.clone();
+          } else {
+            this.date = this.initialDate.clone()
+          }
         }
       },
       yearsVisible(val, oldval) {
